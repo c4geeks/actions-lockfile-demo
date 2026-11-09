@@ -8,6 +8,9 @@ workflows:
         - 'actions/setup-node@v4.4.0'
         - 'actions/upload-artifact@v4.6.2'
         - 'c4geeks/actions-lockfile-demo-tag@v1.0.0'
+    '.github/workflows/verify-lockfile.yml':
+        - 'actions/checkout@v4.4.0'
+        - 'actions/setup-node@v4.4.0'
 dependencies:
     'actions/checkout@v4.4.0':
         ref: 'v4.4.0'
