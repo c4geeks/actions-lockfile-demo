@@ -1,0 +1,12 @@
+name: ci
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: c4geeks/actions-lockfile-demo-tag@v1
+      - uses: ./.github/actions/report
