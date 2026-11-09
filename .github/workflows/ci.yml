@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.4.0
-      - uses: c4geeks/actions-lockfile-demo-tag@v1.0.0
+      - uses: c4geeks/actions-lockfile-demo-tag@v1.0.2
       - uses: $/.github/actions/report
       - uses: actions/upload-artifact@v4.6.2
         with:
