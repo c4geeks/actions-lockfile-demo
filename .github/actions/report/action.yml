@@ -3,7 +3,7 @@ description: Composite action that pulls in another action, so the lockfile has 
 runs:
   using: composite
   steps:
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v4.4.0
       with:
         node-version: '22'
     - run: echo "report step ready (node $(node --version))"
