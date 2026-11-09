@@ -26,6 +26,6 @@ dependencies:
         repo_id: 192625955
     'c4geeks/actions-lockfile-demo-tag@v1.0.0':
         ref: 'v1.0.0'
-        commit: 'sha1-fc276c9ae20b0d51e71743cd0e86f2c8de480149'
+        commit: 'sha1-37faf79198be7da8efbd5722bced0dd683d5d54d'
         owner_id: 276032433
         repo_id: 1450786324
