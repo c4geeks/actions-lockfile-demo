@@ -1,0 +1,29 @@
+name: verify-lockfile
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4.4.0
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: '22'
+      - name: Install the lockfile CLI
+        run: gh extension install github/gh-actions-lock --pin v0.4.1
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Verify the lockfile covers every workflow
+        run: gh actions-lock --verify
+        env:
+          GH_TOKEN: ${{ github.token }}
