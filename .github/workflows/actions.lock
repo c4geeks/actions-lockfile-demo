@@ -6,6 +6,7 @@ workflows:
     '.github/workflows/ci.yml':
         - 'actions/checkout@v4.4.0'
         - 'actions/setup-node@v4.4.0'
+        - 'actions/upload-artifact@v4.6.2'
         - 'c4geeks/actions-lockfile-demo-tag@v1.0.0'
 dependencies:
     'actions/checkout@v4.4.0':
@@ -18,6 +19,11 @@ dependencies:
         commit: 'sha1-49933ea5288caeca8642d1e84afbd3f7d6820020'
         owner_id: 44036562
         repo_id: 189476904
+    'actions/upload-artifact@v4.6.2':
+        ref: 'v4.6.2'
+        commit: 'sha1-ea165f8d65b6e75b540449e92b4886f43607fa02'
+        owner_id: 44036562
+        repo_id: 192625955
     'c4geeks/actions-lockfile-demo-tag@v1.0.0':
         ref: 'v1.0.0'
         commit: 'sha1-fc276c9ae20b0d51e71743cd0e86f2c8de480149'
