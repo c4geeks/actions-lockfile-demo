@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.4.0
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/demo
+          key: demo-${{ github.sha }}
       - uses: c4geeks/actions-lockfile-demo-tag@v1.0.0
       - uses: $/.github/actions/report
       - uses: actions/upload-artifact@v4.6.2
